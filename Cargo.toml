@@ -1,10 +1,23 @@
 [package]
 name = "sfa"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+authors = ["xcodz-dot"]
+description = "Single File Assets for image storage in a single file. Completely Lossless"
+readme = "README.md"
+homepage = "https://github.com/xcodz-dot/sfa"
+repository = "https://github.com/xcodz-dot/sfa"
+license = "MIT"
+keywords = ["gamedev", "archives", "image", "single", "file"]
+categories = ["command-line-utilities", "encoding", "multimedia::images", "parsing"]
 
 [dependencies]
 image = "^0.23.14"
-clap = {version="^3.0.10", features=["cargo", "wrap_help"]}
+clap = {version="^3.0.10", features=["cargo", "wrap_help"], optional = true }
+
+[features]
+cli = ["clap"]
+
+[[bin]]
+name = "sfa"
+required-features = ["cli"]
