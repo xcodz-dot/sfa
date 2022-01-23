@@ -30,13 +30,12 @@ Now the above generated sfa file can be used in our program
 ```rust
 use sfa::decode;
 use std::collections::HashMap;
-use glob::Pattern;
 
 fn main() {
     // Load the file with images in memory (You can skip the type annotations)
     let sprite: HashMap<String, image::DynamicImage> = decode("sprite.sfa").expect("Unexpected error occured");
 
     // Now separate images can be accessed with there original name
-    let frame_1 = sprite["sprite_1.png"];
+    let frame_1 = &sprite["sprite_1.png"];
 }
 ```
