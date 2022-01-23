@@ -21,3 +21,5 @@ To contribute to SFA you have to ensure the following:
   * `# Arguments` - Name of arguments and what is their purpose.
   * `# Errors` - What conditions can possibly raise errors.
   * `# Example` - At least one working example.
+
+* Make sure you only commit to `dev` branch.
