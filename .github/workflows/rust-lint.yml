@@ -1,0 +1,31 @@
+name: Rust Lint
+on: [push]
+jobs:
+  Rust-Linting:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Rust
+        uses: actions-rs/rust-toolchain@v1
+        with: 
+          toolchain: stable
+          profile: default
+      - name: Setup Python
+        uses: actions/setup-python@v2.3.1
+        with:
+          python-version: '3.8'
+      - name: Install dependencies
+        run: pip install codespell
+      - name: Cargo Fmt
+        run: cargo fmt --check
+      - name: Cargo Test
+        run: cargo test --all-features --no-fail-fast
+      - name: Cargo Clippy and Check
+        run: cargo clippy --no-deps && cargo check --all-features
+      - name: Cargo Build (Debug)
+        run: cargo build --profile debug --all-features
+      - name: Cargo Build (Release)
+        run: cargo build --release --all-features
