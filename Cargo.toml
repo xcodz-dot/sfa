@@ -1,6 +1,6 @@
 [package]
 name = "sfa"
-version = "1.0.0"
+version = "1.1.0"
 edition = "2021"
 authors = ["xcodz-dot"]
 description = "Single File Assets for image storage in a single file. Completely Lossless"
