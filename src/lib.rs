@@ -16,7 +16,7 @@ use std::path::Path;
 /// into a sfa file. sfa file stores the images
 /// in PNG format only thus you might loose some
 /// quality while saving in JPEG or lossfully
-/// formated images. Thus using a lossless format
+/// formatted images. Thus using a lossless format
 /// for input is recommended.
 ///
 /// # Arguments
@@ -90,7 +90,7 @@ pub fn encode<T: AsRef<Path>>(
 ///
 /// # Arguments
 ///
-/// * `file` - A path like object that refers to thte file to read for decoding. (`AsRef<Path>`)
+/// * `file` - A path like object that refers to the file to read for decoding. (`AsRef<Path>`)
 ///
 /// # Examples
 ///
@@ -123,7 +123,7 @@ pub fn decode<P: AsRef<Path>>(
 /// first and then processed.
 ///
 /// Most of the times you only want to read from disk and is thus
-/// recommended to use `sfa::decode` instead for convienience.
+/// recommended to use `sfa::decode` instead for convenience.
 ///
 /// # Arguments
 ///
@@ -223,7 +223,7 @@ pub fn decode_from_reader<F: Read>(
 /// crate. This error is only returned when this
 /// crate encounter's SFA format specific errors.
 ///
-/// The feild contained is `s` which is a owned `String`
+/// The field contained is `s` which is a owned `String`
 /// that describes the error.
 #[derive(Debug)]
 struct Error {

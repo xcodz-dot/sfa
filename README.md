@@ -1,6 +1,6 @@
 # SFA (Rust)
 
-Single File Assets is a file storage format for images. The packed images are not guarenteed
+Single File Assets is a file storage format for images. The packed images are not guaranteed
 to be of same format because the format while saving is changed to png which is lossless.
 So expectation of jpeg image being extracted from a sfa file being same does not work.
 
@@ -33,7 +33,7 @@ use std::collections::HashMap;
 
 fn main() {
     // Load the file with images in memory (You can skip the type annotations)
-    let sprite: HashMap<String, image::DynamicImage> = decode("sprite.sfa").expect("Unexpected error occured");
+    let sprite: HashMap<String, image::DynamicImage> = decode("sprite.sfa").expect("Unexpected error occurred");
 
     // Now separate images can be accessed with there original name
     let frame_1 = &sprite["sprite_1.png"];

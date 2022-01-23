@@ -1,0 +1,4 @@
+[codespell]
+skip = ./target/*,.git/*
+ignore-words-list = crate,Crate
+interactive=3
