@@ -26,6 +26,6 @@ jobs:
       - name: Cargo Clippy and Check
         run: cargo clippy --no-deps && cargo check --all-features
       - name: Cargo Build (Debug)
-        run: cargo build --profile debug --all-features
+        run: cargo build --profile dev --all-features
       - name: Cargo Build (Release)
         run: cargo build --release --all-features
